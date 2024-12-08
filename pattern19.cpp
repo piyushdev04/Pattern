@@ -2,39 +2,43 @@
 using namespace std;
 
 void print19(int n) {
-    int iniS = 0;
-    for(int i=0; i<n; i++){
-        //star
-        for(int j=1; j<=n-i; j++){
+    int spaces = 0;
+
+    // Upper part of the pattern
+    for (int i = 0; i < n; i++) {
+        // Left stars
+        for (int j = 1; j <= n - i; j++) {
             cout << "*";
         }
-        //space
-        for(int j=0; j<iniS; j++){
+        // Spaces
+        for (int j = 0; j < spaces; j++) {
             cout << " ";
         }
-        //star
-        for(int j=1; j<=n-i; j++){
+        // Right stars
+        for (int j = 1; j <= n - i; j++) {
             cout << "*";
         }
-        iniS += 2;
+        spaces += 2;
         cout << endl;
     }
 
-    iniS = 2*n-2;
-    for(int i=1; i<=n; i++){
-        //star
-        for(int j=1; j<=i; j++){
+    spaces = 2 * n - 2;
+
+    // Lower part of the pattern
+    for (int i = 1; i <= n; i++) {
+        // Left stars
+        for (int j = 1; j <= i; j++) {
             cout << "*";
         }
-        //space
-        for(int j=0; j<iniS; j++){
+        // Spaces
+        for (int j = 0; j < spaces; j++) {
             cout << " ";
         }
-        //star
-        for(int j=1; j<=i; j++){
+        // Right stars
+        for (int j = 1; j <= i; j++) {
             cout << "*";
         }
-        iniS -= 2;
+        spaces -= 2;
         cout << endl;
     }
 }
