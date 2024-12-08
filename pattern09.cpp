@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void printDiamond(int n) {
-    // Upper part (including middle row)
+void print9(int n) {
+    // Upper part
     for (int i = 0; i < n; i++) {
         // Spaces
         for (int j = 0; j < n - i - 1; j++) {
@@ -32,6 +32,6 @@ void printDiamond(int n) {
 int main() {
     int n;
     cin >> n;
-    printDiamond(n);
+    print9(n);
     return 0;
 }
